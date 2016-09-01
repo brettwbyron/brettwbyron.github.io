@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 	<head>
 		<meta charset="utf-8">
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+		<script src="https://d3js.org/d3.v3.min.js"></script>
 		<style>
 			body {
 				background-color: #bbbbbb;
@@ -65,8 +66,8 @@
 			var hourRange = d3.time.hours(new Date(2013, 0, 1, 0), new Date(2013, 11, 31));
 
 	    // Sunlight Data for each hour in the year 2013
-	    // Indexing: (0)[Hour], (1)[Day], (2)[Month], (3)[Year], (4)[Solar Azimuth Angle], 
-	    //   (5)[Solar Elevation Angle], (6)[Equation of Time], (7)[Solar Declination Angle], 
+	    // Indexing: (0)[Hour], (1)[Day], (2)[Month], (3)[Year], (4)[Solar Azimuth Angle],
+	    //   (5)[Solar Elevation Angle], (6)[Equation of Time], (7)[Solar Declination Angle],
 	    //   (8)[Cosine of Solar Zenith Angle]
 			var dataRaw = new Array()
 			for(i = 0; i < hourRange.length; i++){
@@ -193,8 +194,8 @@
 					.attr('rx', 1)
 					.attr('ry', 3.5)
 					.style('fill', function(d) {return getColor(d[5]); });
-		
-			
+
+
 
 
 
@@ -238,7 +239,7 @@
 
     		var TyScale = d3.scale.linear()
             		        .domain([0, 9])
-                    		.range([hSleep, 0]);	
+                    		.range([hSleep, 0]);
 
             var xAxis = d3.svg.axis()
 							  .scale(xScale)
@@ -248,14 +249,14 @@
 			var TyAxis = d3.svg.axis()
 						  .scale(TyScale)
 						  .orient("left")
-						  .ticks(9);        			             
+						  .ticks(9);
 
 		 //    var TlineFunction = d3.svg.line().data(sleepData).enter()
 			// 	                       .xScale(function(d, i) { return xScale(i);})
 			// 	                       .TyScale(function(d) { return TyScale(+d.Sleep_Time/60);})
 			// 	                       .interpolate("bundle");
 
-			// d3.csv("Data.csv", function(data) {		
+			// d3.csv("Data.csv", function(data) {
 			// 	// svgT.append('g')
 			// 	// 	.attr('class', 'x axis')
 			// 	// 	.attr('transform', 'translate(0,' + hSleep + ')')
@@ -292,7 +293,7 @@
 		//**** Main Daylight Calculations *****
 		//*************************************
 		//*************************************
-		
+
 			//*********** End results *************
 			//-Equation of Time(EOT)
 			//	The difference of the speed of the sun depending on the time of year.
@@ -309,7 +310,7 @@
 			//	Used to calculate the vertical component of direct sunlight shining on a
 			//		horizontal surface.
 			//*************************************
-		
+
 		//*************************************
 
 
@@ -357,7 +358,7 @@
 			}
 
 		// Convert degree angle to radians
-			function degToRad(angleDeg) 
+			function degToRad(angleDeg)
 			{
 				return (Math.PI * angleDeg / 180.0);
 			}
@@ -448,7 +449,7 @@
 					f["latMin"].value = Math.floor((-latSeconds+(parseFloat(f["latDeg"].value)*3600))/60);
 					f["latSec"].value = Math.floor((-latSeconds+(parseFloat(f["latDeg"].value)*3600) - (parseFloat(f["latMin"].value)*60)) + 0.5);
 				}
-			
+
 
 				neg = 0;
 				if(f["lonDeg"].value.charAt(0) == '-') {
@@ -477,7 +478,7 @@
 				f["lonDeg"].value = Math.ceil(lonSeconds/3600);
 				f["lonMin"].value = Math.floor((-lonSeconds+(parseFloat(f["lonDeg"].value)*3600))/60);
 				f["lonSec"].value = Math.floor((-lonSeconds+(parseFloat(f["lonDeg"].value)*3600)-(parseFloat(f["lonMin"].value)*60)) + 0.5);
-				}	
+				}
 			}
 
 		// Returns the numerical day of year
@@ -584,7 +585,7 @@
 			{
 				var v = calcSunTrueAnomaly(t);
 				var e = calcEccentricityEarthOrbit(t);
-		 
+
 				var R = (1.000001018 * (1 - e * e)) / (1 + e * Math.cos(degToRad(v)));
 				return R;	// in AUs
 			}
@@ -622,7 +623,7 @@
 			{
 				var e = calcObliquityCorrection(t);
 				var lambda = calcSunApparentLong(t);
-		 
+
 				var tananum = (Math.cos(degToRad(e)) * Math.sin(degToRad(lambda)));
 				var tanadenom = (Math.cos(degToRad(lambda)));
 				var alpha = radToDeg(Math.atan2(tananum, tanadenom));
@@ -827,7 +828,7 @@
 					} else if (exoatmElevation > -0.575) {
 						refractionCorrection = 1735.0 + exoatmElevation *
 							(-518.2 + exoatmElevation * (103.4 +
-							exoatmElevation * (-12.79 + 
+							exoatmElevation * (-12.79 +
 							exoatmElevation * 0.711) ) );
 					} else {
 						refractionCorrection = -20.774 / te;
@@ -836,14 +837,14 @@
 				}
 
 				solarZen = zenith - refractionCorrection;
-						
-				if(solarZen < 108.0) { // astronomical twilight	
+
+				if(solarZen < 108.0) { // astronomical twilight
 				  theHour.azimuth = (Math.floor(100*
 	azimuth))/100;
 				  theHour.elevation = (Math.floor(100*
 	(90.0 - solarZen)))/100;
 				  if (solarZen < 90.0) {
-					theHour.coszen = 
+					theHour.coszen =
 	(Math.floor(10000.0*(Math.cos(degToRad(solarZen)))))/10000.0;
 				  } else {
 					theHour.coszen = 0.0;
@@ -859,7 +860,7 @@
 				return [theHour.hour, theHour.day, (theHour.month-1), theHour.year, theHour.azimuth, theHour.elevation, theHour.eqTime, theHour.solarDec, theHour.coszen];
 			};
 
-		
+
 
 		</script>
 
