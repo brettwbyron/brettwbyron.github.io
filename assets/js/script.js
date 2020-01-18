@@ -33,7 +33,11 @@ $( document ).on( 'ready', () => {
             position = 1;
             setInterval( () => {
                 var el = $('#' + position);
-                if (position > frames) { clearInterval() }
+                console.log(el);
+                console.log(position);
+                console.log(frames);
+                
+                // if (position > frames) { clearInterval() }
                 el.attr('src', el.attr('data-src'));
                 el.css('opacity','1');
                 position++;
