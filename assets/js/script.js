@@ -16,9 +16,7 @@ $( document ).on( 'ready', () => {
             }
         }
     } );
-} );
 
-$( window ).on( 'load', () => {
     var frames = 20;
     var position;
 
