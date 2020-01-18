@@ -1,9 +1,12 @@
 $( document ).on( 'ready', () => {
-    smoothScroll();
-    animoji();
-} );
+    // animoji hover
+    $('.animoji').on( "mouseenter", ( e ) => {
+        $('.animoji').css('background-image','url("../images/animoji.gif")');
+    } );
+    $('.animoji').on( "mouseleave", ( e ) => {
+        $('.animoji').css('background-image','url("../images/animoji_reverse.gif")');
+    } );
 
-function smoothScroll() {
     // Smooth scroll
     $( 'a[href*="#"]:not([href="#"])' ).click( function () {
         if ( location.pathname.replace( /^\//, '' ) == this.pathname.replace( /^\//, '' ) ||
@@ -21,13 +24,4 @@ function smoothScroll() {
             }
         }
     } );
-}
-
-function animoji() {
-    $('.animoji').addEventListener( "mouseenter", ( e ) => {
-        $('.animoji').css('background-image','url("../images/animoji.gif")');
-    } );
-    $('.animoji').addEventListener( "mouseleave", ( e ) => {
-        $('.animoji').css('background-image','url("../images/animoji_reverse.gif")');
-    } );
-}
+} );
