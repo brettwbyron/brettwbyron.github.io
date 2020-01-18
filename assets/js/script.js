@@ -30,7 +30,7 @@ $( document ).on( 'ready', () => {
     $('#animoji').on( "mouseenter", ( e ) => {
         console.log('hover');
         setTimeout( () => {
-            position = 0;
+            position = 1;
             setInterval( () => {
                 var el = $('#' + position);
                 if (position > frames) { clearInterval() }
