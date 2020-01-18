@@ -24,11 +24,10 @@ function smoothScroll() {
 }
 
 function animoji() {
-    $('.animoji').on('hover', () => {
+    $('.animoji').addEventListener( "mouseenter", ( e ) => {
         $('.animoji').css('background-image','url("../images/animoji.gif")');
-    });
-
-    $('.animation').on('mouseout', () => {
+    } );
+    $('.animoji').addEventListener( "mouseleave", ( e ) => {
         $('.animoji').css('background-image','url("../images/animoji_reverse.gif")');
-    });
+    } );
 }

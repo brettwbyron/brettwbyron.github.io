@@ -308,4 +308,5 @@ ul.examples {list-style-type:none;padding:0;
 #map {height:700px;width:100%;}
 // --- End Interactive SVG
 // Animoji
-.animoji {height:200px;width:200px;background:url('../images/animoji_static.gif');}
+.animoji {height:200px;width:200px;background-image:url('../images/animoji_static.gif');background-size:contain;background-repeat:no-repeat;background-position:center;}
+.animoji:hover {background-image:url('../images/animoji.gif');}
