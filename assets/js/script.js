@@ -1,12 +1,4 @@
 $( document ).on( 'ready', () => {
-    // animoji hover
-    $('.animoji').on( "mouseenter", ( e ) => {
-        $('.animoji').css('background-image','url("../assets/images/animoji.gif")');
-    } );
-    $('.animoji').on( "mouseleave", ( e ) => {
-        $('.animoji').css('background-image','url("../assets/images/animoji_reverse.gif")');
-    } );
-
     // Smooth scroll
     $( 'a[href*="#"]:not([href="#"])' ).click( function () {
         if ( location.pathname.replace( /^\//, '' ) == this.pathname.replace( /^\//, '' ) ||
@@ -23,5 +15,31 @@ $( document ).on( 'ready', () => {
                 return false;
             }
         }
+    } );
+} );
+
+$( window ).on( 'load', () => {
+    var frames = 20;
+    var position;
+
+    for (var i = 0; i < frames; i++) {
+        $('.animoji').appendChild("<img class='animoji-frame' id='" + i + "'" + " data-src='https://brettwbyron.github.io/assets/images/animoji/" + i + ".png'>");
+    }
+
+    // animoji hover
+    $('.animoji').on( "hover", ( e ) => {
+        setTimeout( () => {
+            position = 0;
+            setInterval( () => {
+                var el = $('#' + position);
+                if (position > frames) { clearInterval() }
+                el.attr('src', el.attr('data-src'));
+                el.css('opacity','1');
+                position++;
+            }, 100 );
+        }, 100 );
+    } );
+    $('.animoji').on( "mouseleave", ( e ) => {
+
     } );
 } );
