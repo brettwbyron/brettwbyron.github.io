@@ -23,7 +23,7 @@ $( document ).on( 'ready', () => {
     for (var i = 0; i < frames; i++) {
         var frame = document.createElement('IMG');
         frame.dataset.src = "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png";
-        $('#animoji').html(frame);
+        $('#animoji').append(frame);
     }
 
     // animoji hover
