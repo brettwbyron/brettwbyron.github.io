@@ -23,11 +23,11 @@ $( window ).on( 'load', () => {
     var position;
 
     for (var i = 0; i < frames; i++) {
-        $('.animoji').appendChild("<img class='animoji-frame' id='" + i + "'" + " data-src='https://brettwbyron.github.io/assets/images/animoji/" + i + ".png'>");
+        document.getElementsById('animoji').appendChild("<img class='animoji-frame' id='" + i + "'" + " data-src='https://brettwbyron.github.io/assets/images/animoji/" + i + ".png'>");
     }
 
     // animoji hover
-    $('.animoji').on( "hover", ( e ) => {
+    $('#animoji').on( "hover", ( e ) => {
         setTimeout( () => {
             position = 0;
             setInterval( () => {
@@ -39,7 +39,7 @@ $( window ).on( 'load', () => {
             }, 100 );
         }, 100 );
     } );
-    $('.animoji').on( "mouseleave", ( e ) => {
+    $('#animoji').on( "mouseleave", ( e ) => {
 
     } );
 } );
