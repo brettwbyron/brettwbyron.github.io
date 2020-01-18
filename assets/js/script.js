@@ -34,8 +34,6 @@ $( document ).on( 'ready', () => {
             position = 1;
             var imgs = setInterval( () => {
                 var el = $('#' + position);
-                console.log(el);
-                console.log(position);
 
                 if (position > frames) {
                     clearInterval(imgs);
@@ -43,6 +41,7 @@ $( document ).on( 'ready', () => {
                 } else {
                     el.css('opacity','1');
                     position++;
+                    console.log('up:' + position);
                 }
             }, 100 );
         }, 100 );
@@ -50,13 +49,15 @@ $( document ).on( 'ready', () => {
     $('#animoji').on( "mouseleave", ( e ) => {
         var removeImgs = setInterval( () => {
             var el = $('#' + position);
-            console.log(position);
 
             if (position === 1) {
                 clearInterval(removeImgs);
+                console.log(position);
+
             } else {
                 el.css('opacity','0');
                 position--;
+                console.log('down:' + position);
             }
         }, 100 );
     } );
