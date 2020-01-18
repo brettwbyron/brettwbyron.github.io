@@ -21,7 +21,9 @@ $( document ).on( 'ready', () => {
     var position;
 
     for (var i = 0; i < frames; i++) {
-        document.getElementById('animoji').prepend("<img class='animoji-frame' id='" + i + "'" + " data-src='https://brettwbyron.github.io/assets/images/animoji/" + i + ".png'>");
+        var frame = document.createElement('IMG');
+        frame.dataset.src = "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png";
+        $('#animoji').html(frame);
     }
 
     // animoji hover
