@@ -19,4 +19,4 @@
   </li>
 </ul>
 
-<div class="aniomji"></div>
+<div class="animoji"></div>
