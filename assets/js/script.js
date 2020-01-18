@@ -21,9 +21,9 @@ $( document ).on( 'ready', () => {
     var position;
 
     for (var i = 0; i < frames; i++) {
-        var frame = document.createElement('IMG');
-        frame.dataset.src = "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png";
-        frame.id = i;
+        var frame = document.createElement('div');
+        frame.style.backgroundImage = "https://brettwbyron.github.io/assets/images/animoji/" + i+1 + ".png";
+        frame.id = i+1;
         $('#animoji').append(frame);
     }
 
@@ -41,7 +41,6 @@ $( document ).on( 'ready', () => {
                     clearInterval(imgs);
                     position = 1;
                 } else {
-                    el.attr('src', el.attr('data-src'));
                     el.css('opacity','1');
                     position++;
                 }
@@ -49,6 +48,16 @@ $( document ).on( 'ready', () => {
         }, 100 );
     } );
     $('#animoji').on( "mouseleave", ( e ) => {
+        var removeImgs = setInterval( () => {
+            var el = $('#' + position);
+            console.log(position);
 
+            if (position === 1) {
+                clearInterval(removeImgs);
+            } else {
+                el.css('opacity','0');
+                position--;
+            }
+        }, 100 );
     } );
 } );
