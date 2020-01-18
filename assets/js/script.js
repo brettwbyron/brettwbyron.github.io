@@ -36,8 +36,8 @@ $( document ).on( 'ready', () => {
                 console.log(el);
                 console.log(position);
                 console.log(frames);
-                
-                // if (position > frames) { clearInterval() }
+
+                if (position > frames) { clearInterval() }
                 el.attr('src', el.attr('data-src'));
                 el.css('opacity','1');
                 position++;
