@@ -27,7 +27,7 @@ $( document ).on( 'ready', () => {
     }
 
     // animoji hover
-    $('#animoji').on( "hover", ( e ) => {
+    $('#animoji').on( "mouseenter", ( e ) => {
         console.log('hover');
         setTimeout( () => {
             position = 0;
