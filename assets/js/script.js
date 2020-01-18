@@ -23,7 +23,7 @@ $( window ).on( 'load', () => {
     var position;
 
     for (var i = 0; i < frames; i++) {
-        document.getElementById('animoji').appendChild("<img class='animoji-frame' id='" + i + "'" + " data-src='https://brettwbyron.github.io/assets/images/animoji/" + i + ".png'>");
+        document.getElementById('animoji').prepend("<img class='animoji-frame' id='" + i + "'" + " data-src='https://brettwbyron.github.io/assets/images/animoji/" + i + ".png'>");
     }
 
     // animoji hover
