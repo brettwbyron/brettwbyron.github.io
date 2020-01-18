@@ -32,15 +32,14 @@ $( document ).on( 'ready', () => {
         console.log('hover');
         setTimeout( () => {
             position = 1;
-            setInterval( () => {
+            var imgs = setInterval( () => {
                 var el = $('#' + position);
                 console.log(el);
                 console.log(position);
-                console.log(frames);
 
                 if (position > frames) {
-                    clearInterval()
-                    position = 0;
+                    clearInterval(imgs);
+                    position = 1;
                 } else {
                     el.attr('src', el.attr('data-src'));
                     el.css('opacity','1');
