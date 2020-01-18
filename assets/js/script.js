@@ -28,6 +28,7 @@ $( document ).on( 'ready', () => {
 
     // animoji hover
     $('#animoji').on( "hover", ( e ) => {
+        console.log('hover');
         setTimeout( () => {
             position = 0;
             setInterval( () => {
