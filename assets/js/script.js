@@ -23,6 +23,7 @@ $( document ).on( 'ready', () => {
     for (var i = 0; i < frames; i++) {
         var frame = document.createElement('IMG');
         frame.dataset.src = "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png";
+        frame.id = i;
         $('#animoji').append(frame);
     }
 
@@ -37,10 +38,14 @@ $( document ).on( 'ready', () => {
                 console.log(position);
                 console.log(frames);
 
-                if (position > frames) { clearInterval() }
-                el.attr('src', el.attr('data-src'));
-                el.css('opacity','1');
-                position++;
+                if (position > frames) {
+                    clearInterval()
+                    position = 0;
+                } else {
+                    el.attr('src', el.attr('data-src'));
+                    el.css('opacity','1');
+                    position++;
+                }
             }, 100 );
         }, 100 );
     } );
