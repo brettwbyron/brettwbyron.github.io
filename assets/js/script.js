@@ -1,10 +1,10 @@
 $( document ).on( 'ready', () => {
     // animoji hover
     $('.animoji').on( "mouseenter", ( e ) => {
-        $('.animoji').css('background-image','url("../images/animoji.gif")');
+        $('.animoji').css('background-image','url("../assets/images/animoji.gif")');
     } );
     $('.animoji').on( "mouseleave", ( e ) => {
-        $('.animoji').css('background-image','url("../images/animoji_reverse.gif")');
+        $('.animoji').css('background-image','url("../assets/images/animoji_reverse.gif")');
     } );
 
     // Smooth scroll
