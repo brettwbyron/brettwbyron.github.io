@@ -20,10 +20,10 @@ $( document ).on( 'ready', () => {
     var frames = 20;
     var position;
 
-    for (var i = 0; i < frames; i++) {
+    for (var i = 1; i < frames; i++) {
         var frame = document.createElement('div');
-        frame.style.backgroundImage = "https://brettwbyron.github.io/assets/images/animoji/" + i+1 + ".png";
-        frame.id = i+1;
+        frame.style.backgroundImage = "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png";
+        frame.id = i;
         $('#animoji').append(frame);
     }
 
