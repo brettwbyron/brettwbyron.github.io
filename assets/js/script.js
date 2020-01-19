@@ -41,6 +41,7 @@ $( document ).on( 'ready', () => {
                 if (position > frames) {
                     clearInterval(interval);
                 } else {
+                    if (position > 20) {position = 20;}
                     el.css('opacity','1');
                     console.log('up:' + position);
                     position++;
@@ -57,6 +58,7 @@ $( document ).on( 'ready', () => {
             if (position === 1) {
                 clearInterval(interval);
             } else {
+                if (position > 20) {position = 20;}
                 el.css('opacity','0');
                 console.log('down:' + position);
                 position--;
