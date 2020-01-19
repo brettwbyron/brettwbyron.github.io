@@ -28,15 +28,18 @@ $( document ).on( 'ready', () => {
     }
 
     // animoji hover
+    var interval;
+
     $('#animoji').on( "mouseenter", ( e ) => {
-        console.log('hover');
+        console.log('mouseenter');
+        clearInterval(interval);
         setTimeout( () => {
             position = 1;
-            var imgs = setInterval( () => {
+            interval = setInterval( () => {
                 var el = $('#' + position);
 
                 if (position > frames) {
-                    clearInterval(imgs);
+                    clearInterval(interval);
                     position = 1;
                 } else {
                     el.css('opacity','1');
@@ -47,11 +50,13 @@ $( document ).on( 'ready', () => {
         }, 100 );
     } );
     $('#animoji').on( "mouseleave", ( e ) => {
-        var removeImgs = setInterval( () => {
+        console.log('mouseleave');
+        clearInterval(interval);
+        interval = setInterval( () => {
             var el = $('#' + position);
 
             if (position === 1) {
-                clearInterval(removeImgs);
+                clearInterval(interval);
                 console.log(position);
 
             } else {
