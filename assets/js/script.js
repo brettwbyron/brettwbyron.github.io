@@ -65,12 +65,9 @@ $( document ).on( 'ready', () => {
             position--;
             var el = $('#' + position);
 
-            if (position === 1) {
-                clearInterval(interval);
-            } else {
+            
                 if (position > 20) {position = 20;}
                 el.css('opacity','0');
-            }
         }, 10 );
     } );
 } );
