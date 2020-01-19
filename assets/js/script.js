@@ -51,7 +51,7 @@ $( document ).on( 'ready', () => {
                     position++;
                 }
                 console.log('up:' + position);
-            }, 100 );
+            }, 10 );
         }, 100 );
     } );
     $('#animoji').on( "mouseleave", ( e ) => {
@@ -66,6 +66,6 @@ $( document ).on( 'ready', () => {
                 if (position > 20) {position = 20;}
                 el.css('opacity','0');
             }
-        }, 100 );
+        }, 10 );
     } );
 } );
