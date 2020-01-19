@@ -22,9 +22,9 @@ $( document ).on( 'ready', () => {
 
     for (var i = 1; i < frames; i++) {
         var frame = document.createElement('div');
-        frame.style.backgroundImage = "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png";
         frame.id = i;
         $('#animoji').append(frame);
+        $('#' + i).css("background-image", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
     }
 
     // animoji hover
