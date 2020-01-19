@@ -40,11 +40,10 @@ $( document ).on( 'ready', () => {
 
                 if (position > frames) {
                     clearInterval(interval);
-                    position = 1;
                 } else {
                     el.css('opacity','1');
-                    position++;
                     console.log('up:' + position);
+                    position++;
                 }
             }, 100 );
         }, 100 );
@@ -57,12 +56,10 @@ $( document ).on( 'ready', () => {
 
             if (position === 1) {
                 clearInterval(interval);
-                console.log(position);
-
             } else {
                 el.css('opacity','0');
-                position--;
                 console.log('down:' + position);
+                position--;
             }
         }, 100 );
     } );
