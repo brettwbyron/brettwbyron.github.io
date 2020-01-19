@@ -23,6 +23,8 @@ $( document ).on( 'ready', () => {
     for (var i = 1; i < frames; i++) {
         var frame = document.createElement('div');
         frame.id = i;
+        frame.style = "";
+        frame['style'] = frame['style'] + "background-image:url('https://brettwbyron.github.io/assets/images/animoji/" + i + ".png');"
         $('#animoji').append(frame);
         $('#' + i).css("background-image", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
     }
