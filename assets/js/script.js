@@ -24,9 +24,9 @@ $( document ).on( 'ready', () => {
         var frame = document.createElement('div');
         frame.id = i;
         frame.style = "";
-        frame['style'] = frame['style'] + "background-image:url('https://brettwbyron.github.io/assets/images/animoji/" + i + ".png');"
+        frame['style'] = frame['style'] + "backgroundImage:url('https://brettwbyron.github.io/assets/images/animoji/" + i + ".png');"
         $('#animoji').append(frame);
-        $('#' + i).css("background-image", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
+        $('#' + i).css("backgroundImage", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
     }
 
     // animoji hover
@@ -45,7 +45,7 @@ $( document ).on( 'ready', () => {
                 } else {
                     if (position > 20) {position = 20;}
                     el.css('opacity','1');
-                    el.css("background-image", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
+                    el.css("backgroundImage", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
                     console.log('up:' + position);
                     position++;
                 }
