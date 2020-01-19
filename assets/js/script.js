@@ -55,6 +55,7 @@ $( document ).on( 'ready', () => {
         console.log('mouseleave');
         clearInterval(interval);
         interval = setInterval( () => {
+            position--;
             var el = $('#' + position);
 
             if (position === 1) {
@@ -63,7 +64,6 @@ $( document ).on( 'ready', () => {
                 if (position > 20) {position = 20;}
                 el.css('opacity','0');
                 console.log('down:' + position);
-                position--;
             }
         }, 100 );
     } );
