@@ -47,7 +47,12 @@ $( document ).on( 'ready', () => {
                 } else {
                     if (position > 20) {position = 20;}
                     el.css('opacity','1');
-                    el.css("backgroundImage", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
+                    if (i === 1) {
+                        el.css("backgroundImage", "https://brettwbyron.github.io/assets/images/animoji/" + 2 + ".png");
+                    } else {
+                        el.css("backgroundImage", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
+                    }
+
                     position++;
                 }
                 console.log('up:' + position);
