@@ -45,6 +45,7 @@ $( document ).on( 'ready', () => {
                 } else {
                     if (position > 20) {position = 20;}
                     el.css('opacity','1');
+                    el.css("background-image", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
                     console.log('up:' + position);
                     position++;
                 }
