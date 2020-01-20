@@ -31,7 +31,7 @@ $(document).on('ready', function() {
             //     }
             // }, 10 );
         // }, 100 );
-        this.css("backgroundImage", "url('../images/animoji.gif')")
+        $('#animoji').css("backgroundImage", "url('../images/animoji.gif')")
     } );
     $('#animoji').on( "mouseout touchend", ( e ) => {
         // clearInterval(interval);
@@ -47,7 +47,7 @@ $(document).on('ready', function() {
         //     }
         // }, 10 );
         setTimeout( () => {
-            this.css("backgroundImage", "url('animoji_reverse')");
+            $('#animoji').css("backgroundImage", "url('animoji_reverse')");
         }, 1000);
     } );
 });
