@@ -308,6 +308,5 @@ ul.examples {list-style-type:none;padding:0;
 #map {height:700px;width:100%;}
 // --- End Interactive SVG
 // Animoji
-#animoji {height:200px;width:200px;background-size:contain;background-repeat:no-repeat;background-position:center;}
+#animoji {height:200px;width:200px;background-size:contain;background-repeat:no-repeat;background-position:center;-webkit-box-reflect: below 0 linear-gradient(rgba(#fff) 80%, rgba(#fff, .7));}
 #animoji .animoji-frame {position:absolute;height:200px;width:200px;opacity:0;transition:all 0.01s linear;background-size:contain;background-repeat:no-repeat;background-position:center;}
-#animoji .animoji-frame:first-of-type {opacity:1;}
