@@ -12,11 +12,9 @@
     <p>Code</p>
   </li>
   <li class="circle-item">
-    <a class="circle" href="{{ "/config" | relative_url }}">
-      <i class="fa fa-cog"></i>
+    <a class="circle" href="{{ "/git" | relative_url }}">
+      <i class="fa fa-code-branch"></i>
     </a>
-    <p>Config</p>
+    <p>Git</p>
   </li>
 </ul>
-
-<div id="animoji" class="animoji"></div>
