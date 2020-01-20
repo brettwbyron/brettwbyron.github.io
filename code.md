@@ -21,9 +21,9 @@ layout: code
       <p>Interactive SVGs</p>
     </a>
   </li>
-  <li class="animoji-example">
+  <!-- <li class="animoji-example">
     <a class="thumbnail" href="{{ "/examples/animoji" | relative_url }}">
       <p>Animoji Hover</p>
     </a>
-  </li>
+  </li> -->
 </ul>
