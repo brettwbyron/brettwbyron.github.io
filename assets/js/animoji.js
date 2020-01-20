@@ -47,7 +47,7 @@ $(document).on('ready', function() {
         //     }
         // }, 10 );
         setTimeout( () => {
-            $('#animoji').css("backgroundImage", "url('../assets/images/animoji_reverse')");
+            $('#animoji').css("backgroundImage", "url('../assets/images/animoji_reverse.gif')");
         }, 1000);
     } );
 });
