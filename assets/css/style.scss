@@ -310,3 +310,4 @@ ul.examples {list-style-type:none;padding:0;
 // Animoji
 #animoji {height:200px;width:200px;background-size:contain;background-repeat:no-repeat;background-position:center;}
 #animoji .animoji-frame {position:absolute;height:200px;width:200px;opacity:0;transition:all 0.01s linear;background-size:contain;background-repeat:no-repeat;background-position:center;}
+#animoji .animoji-frame:first-of-type {opacity:1;}
