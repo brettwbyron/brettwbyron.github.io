@@ -6,7 +6,7 @@ $(document).on('ready', function() {
         var frame = document.createElement('div');
         frame.id = i;
         frame.classList.add('animoji-frame');
-        frame.style.backgroundImage = "url('https://brettwbyron.github.io/assets/images/animoji/" + i + ".png'";
+        frame.style.backgroundImage = "url('../images/animoji/" + i + ".png')";
         if (i = 1) { frame.style.opacity = '1' }
         $('#animoji').append(frame);
     }
@@ -26,7 +26,7 @@ $(document).on('ready', function() {
                 } else {
                     if (position > 20) {position = 20;}
                     el.css('opacity','1');
-                    el.css("backgroundImage", "https://brettwbyron.github.io/assets/images/animoji/" + i + ".png");
+                    el.css("backgroundImage", "url('../images/animoji/" + i + ".png')");
                     position++;
                 }
             }, 10 );

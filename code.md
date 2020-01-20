@@ -12,17 +12,17 @@ layout: code
 
 <ul class="examples">
   <li class="scroll-example">
-    <a class="thumbnail" href="/CWS/examples/scrollAnimation">
+    <a class="thumbnail" href="{{ "/examples/scrollAnimation" | relative_url }}">
       <p>Scrolling Animation</p>
     </a>
   </li>
   <li class="svg-example">
-    <a class="thumbnail" href="/CWS/examples/svg">
+    <a class="thumbnail" href="{{ "/examples/svg" | relative_url }}">
       <p>Interactive SVGs</p>
     </a>
   </li>
   <li class="animoji-example">
-    <a class="thumbnail" href="/CWS/examples/animoji">
+    <a class="thumbnail" href="{{ "/examples/animoji" | relative_url }}">
       <p>Animoji Hover</p>
     </a>
   </li>
