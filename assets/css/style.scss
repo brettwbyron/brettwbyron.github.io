@@ -32,12 +32,12 @@ h4 {font-size:1.0625em}
 h5 {font-size:1em;text-transform:uppercase}
 p {font-size:1em;margin-bottom:1.25em;line-height:1.375}
 dl,ol,ul {color:#777}
-::-moz-selection {background:#3d87cf;color:#fff;text-shadow:none}
-::selection {background:#3d87cf;color:#fff;text-shadow:none}
+::-moz-selection {background:$color-secondary;color:$color-gray;text-shadow:none}
+::selection {background:$color-secondary;color:$color-gray;text-shadow:none}
 section:focus {outline:0}
 /*! =Links */
-a,a:visited {color:#046380;text-decoration:none}
-a:focus,a:hover {color:#022a36;text-decoration:none;cursor:pointer}
+a,a:visited {color:$color-dark-secondary;text-decoration:none}
+a:focus,a:hover {color:$color-dark-secondary;text-decoration:none;cursor:pointer}
 a.disabled {cursor:default;pointer-events:none}
 .tools {margin:1em}
 .tools a {margin:0 .25em;width:270px;padding:10px 15px}
@@ -254,7 +254,6 @@ ul.examples {list-style-type:none;padding:0;
     & li {position:relative;border:2px solid $color-secondary;margin:20px auto 60px;transition:all 0.5s ease,background-position 0s ease;box-shadow:0px 0px 0px rgba(#000,0);padding-bottom:80%;background-size:100%;background-position:center;background-repeat:no-repeat;
         &.scroll-example {background-image:url("../images/scrollAnimationScreenshot.jpg");}
         &.svg-example {background-image:url("../images/svg.jpg");}
-        &.svg-example {background-image:url("../images/animoji-screenshot.jpg");}
     }
     & li:hover {box-shadow:2px 2px 8px -2px rgba(0,0,0,0.5);background-size:110%;background-position:center;background-repeat:no-repeat;transform:scale(1.05);
         & a {background:rgba(#000, 0.75);
@@ -268,10 +267,11 @@ ul.examples {list-style-type:none;padding:0;
 // Anchor pulse
 .anchor {transition:background-color 0.5s ease;background-color:transparent;margin:0 -1em;padding:1em;}
 .anchor:focus {background-color:rgba($color-secondary, 0.4);}
+
 // --- Start Scroll animation
 .scroll-data {position:fixed;top:0px;right:20px;background:#fff;width:28%;border:2px solid $color-dark-secondary;border-top:0;color:$color-dark-secondary;font-size:25px;line-height:1;z-index:999;}
 .start-data-ltr, .end-data-ltr, .start-data-rtl, .end-data-rtl {position:absolute;top:0;left:0;border-top:2px solid $color-dark-secondary;width:100px;text-align:left;}
-.logo {background-image:url('//careers.jobvite.com/brettbyron/images/logo.svg');background-repeat:no-repeat;background-position:center;background-size:contain;height:100px;width:auto;}
+.logo {background-image:url('../images/logo.svg');background-repeat:no-repeat;background-position:center;background-size:contain;height:100px;width:auto;}
 .logo-animation {height:50px;position:absolute;top:0;left:0}
 .capital,.lower {fill:none;stroke-width:23;stroke-miterlimit:10;-webkit-transition:stroke-dashoffset 2s ease-in-out;transition:stroke-dashoffset 2s ease-in-out}
 .lower#stem {stroke:rgba(39,39,39,.75);stroke-dashoffset:264;stroke-dasharray:264,264;-webkit-transition:stroke-dashoffset 1s ease-in-out;transition:stroke-dashoffset 1s ease-in-out}
@@ -280,6 +280,7 @@ ul.examples {list-style-type:none;padding:0;
 #scrollAnimationLTR, #scrollAnimationRTL {padding:0 0 50px;min-height:120vh;margin-top:100px;}
 #scrollAnimationRTL {min-height:150vh;}
 #scrollAnimationLTR, #scrollAnimationRTL h1 {margin:0 auto}
+
 // LTR scroll animation
 #scrollAnimationLTR .scroll-animation {border:2px solid $color-dark-secondary;width:100%;overflow-y:scroll;}
 #scrollAnimationLTR .scroll-animation .content {position:relative;min-height:300px;height:100%;width:100%;}
@@ -291,6 +292,7 @@ ul.examples {list-style-type:none;padding:0;
 #scrollAnimationLTR .position-data {position:absolute;top:0;left:0;}
 #scrollAnimationLTR .mask-data {width:60%;text-align:right;float:right;}
 #scrollAnimationLTR .left-data {position:absolute;left:-100px;bottom:0;width:100px;color:$color-dark-secondary;text-align:right;}
+
 // RTL scroll animation
 #scrollAnimationRTL .scroll-animation {border:2px solid $color-dark-secondary;width:100%;overflow-y:scroll;}
 #scrollAnimationRTL .scroll-animation .content {position:relative;min-height:300px;height:100%;width:100%;}
@@ -303,11 +305,28 @@ ul.examples {list-style-type:none;padding:0;
 #scrollAnimationRTL .mask-data {width:60%;text-align:right;float:right;}
 #scrollAnimationRTL .right-data {position:absolute;right:-100px;bottom:0;width:100px;color:$color-dark-secondary;text-align:right;}
 // --- End Scroll Animation
+
 // --- Start Interactive SVG
-// map
-#svgMap {min-height:100vh;}
-#map {height:700px;width:100%;}
+
 // --- End Interactive SVG
 // Animoji
-#animoji {height:200px;width:200px;background-size:contain;background-repeat:no-repeat;background-position:center;-webkit-box-reflect: below 0 linear-gradient(rgba(#fff) 80%, rgba(#fff, .7));}
-#animoji .animoji-frame {position:absolute;height:200px;width:200px;opacity:0;transition:all 0.01s linear;background-size:contain;background-repeat:no-repeat;background-position:center;}
+#animoji {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#animoji .animoji-frame {
+    & :first-of-type {
+        opacity: 1;
+    }
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin:auto;
+    opacity: 0;
+    transition: all 0.01s linear;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
