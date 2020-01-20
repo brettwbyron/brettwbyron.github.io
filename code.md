@@ -21,4 +21,9 @@ layout: code
       <p>Interactive SVGs</p>
     </a>
   </li>
+  <li class="animoji-example">
+    <a class="thumbnail" href="/CWS/examples/animoji">
+      <p>Animoji Hover</p>
+    </a>
+  </li>
 </ul>

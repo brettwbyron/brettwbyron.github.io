@@ -2,7 +2,7 @@ $(document).on('ready', function() {
     var frames = 20;
     var position;
 
-    for (var i = 1; i < frames; i++) {
+    for (var i = 1; i-1 < frames; i++) {
         var frame = document.createElement('div');
         frame.id = i;
         frame.classList.add('animoji-frame');
