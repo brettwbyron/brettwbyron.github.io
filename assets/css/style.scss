@@ -254,7 +254,7 @@ ul.examples {list-style-type:none;padding:0;
     & li {position:relative;border:2px solid $color-secondary;margin:20px auto 60px;transition:all 0.5s ease,background-position 0s ease;box-shadow:0px 0px 0px rgba(#000,0);padding-bottom:80%;background-size:100%;background-position:center;background-repeat:no-repeat;
         &.scroll-example {background-image:url("../images/scrollAnimationScreenshot.jpg");}
         &.svg-example {background-image:url("../images/svg.jpg");}
-        &.svg-example {background-image:url("../images/animoji-screenshot.jpg");}
+        &.animoji-example {background-image:url("../images/animoji-screenshot.jpg");}
     }
     & li:hover {box-shadow:2px 2px 8px -2px rgba(0,0,0,0.5);background-size:110%;background-position:center;background-repeat:no-repeat;transform:scale(1.05);
         & a {background:rgba(#000, 0.75);
