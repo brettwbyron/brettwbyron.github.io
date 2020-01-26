@@ -3,10 +3,10 @@ function animateLines(elem, toggle="on", speed="1000") {
         // elem.node.css('transition-duration',(elem.node.css('transition-duration') * 0.5));
     }
     if (toggle.toLowerCase() === "on") {
-        $( '.' + elem.node.className.baseVal ).css('stroke-dashoffset',0);
+        $( elem.node.tagName + '.' + elem.node.className.baseVal ).css('stroke-dashoffset',0);
         // elem.attr({strokeDashoffset: 0});
     } else if (toggle.toLowerCase() === "off") {
-        $( '.' + elem.node.className.baseVal ).css('stroke-dashoffset',1);
+        $( elem.node.tagName + '.' + elem.node.className.baseVal ).css('stroke-dashoffset',1);
         // elem.attr({strokeDashoffset: 1});
     }
     // console.log($(elem.node).css('transition-duration'));
