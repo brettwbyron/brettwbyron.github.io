@@ -1,0 +1,21 @@
+header {
+    height: 80px;
+    width: 100vw;
+    margin: 0;
+
+    .nav-burger {
+        height:80px;
+        width:80px;
+        margin: 0;
+        padding: 0;
+
+        & svg {
+            padding: 15px;
+        }
+    }
+
+    nav {
+        width:80px;
+        height:100vh;
+    }
+}

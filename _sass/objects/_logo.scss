@@ -1,0 +1,47 @@
+// .logo {
+//     background-image: url('../images/logo.svg');
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: contain;
+//     height: 100px;
+//     width: auto;
+// }
+
+// .logo-animation {
+//     height: 50px;
+//     position: absolute;
+//     top: 0;
+//     left: 0
+// }
+
+
+
+svg {
+    & .capital,
+    & .lower {
+        fill: none;
+        stroke-width: 23;
+        stroke-miterlimit: 10;
+        transition: stroke-dashoffset 2s ease-in-out
+    }
+
+    & .lower#stem, & .stem {
+        stroke: rgba(39, 39, 39, .75);
+        stroke-dashoffset: 1;
+        stroke-dasharray: 1;
+        transition: stroke-dashoffset 1s ease-in-out
+    }
+
+    & .lower#bowl {
+        stroke: rgba(243, 116, 79, .75);
+        stroke-dashoffset: 1;
+        stroke-dasharray: 1;
+        transition: stroke-dashoffset 1.5s ease-in-out
+    }
+
+    & .capital {
+        stroke: rgba(165, 192, 205, .75);
+        stroke-dashoffset: 1;
+        stroke-dasharray: 1;
+    }
+}

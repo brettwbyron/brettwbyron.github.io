@@ -15,12 +15,14 @@ html {
 
 body,
 html {
-    @if $mobile == false and $area-iframe-site == false {
+    @if $mobile==false and $area-iframe-site==false {
         height: 100%;
     }
-    @if $mobile == true {
+
+    @if $mobile==true {
         height: 100vh;
     }
+
     font-family: $font-body;
     font-size: 100%;
     font-weight: 300;
@@ -29,15 +31,16 @@ html {
 }
 
 body {
-    @if $mobile == false {
+    @if $mobile==false {
         @include flex;
         @include flex-col;
     }
+
     background-color: $color-white;
     color: $color-text;
     padding: 0;
     margin: 0;
-    font-size: $font-size-base + em;
+    font-size: $font-size-base+em;
     line-height: $line-height-base;
     cursor: default;
 }
@@ -57,13 +60,15 @@ h5 {
 }
 
 h1 {
-    @if $mobile == false {
+    @if $mobile==false {
         font-size: $h1;
     }
+
     // End Desktop
-    @if $mobile == true {
+    @if $mobile==true {
         font-size: $h1-m;
     }
+
     // End Mobile
     // text-transform: uppercase;
 }
@@ -71,11 +76,13 @@ h1 {
 .h2,
 h2 {
     line-height: 1.5;
+
     // text-transform: uppercase;
-    @if $mobile == false {
+    @if $mobile==false {
         font-size: $h2;
     }
-    @if $mobile == true {
+
+    @if $mobile==true {
         font-size: $h2-m;
 
         &.jv-header {
@@ -87,21 +94,24 @@ h2 {
 }
 
 h3 {
-    @if $mobile == false {
+    @if $mobile==false {
         font-size: $h3;
     }
-    @if $mobile == true {
+
+    @if $mobile==true {
         font-size: $h3-m;
     }
+
     // color: $color-accent;
     line-height: 1.3;
 }
 
 h4 {
-    @if $mobile == false {
+    @if $mobile==false {
         font-size: $h4;
     }
-    @if $mobile == true {
+
+    @if $mobile==true {
         font-size: $h4-m;
     }
 }
@@ -112,17 +122,18 @@ h5 {
 }
 
 p {
-    @if $mobile == false {
+    @if $mobile==false {
         font-size: ($p / $font-size-base) + em;
     }
-    @if $mobile == true {
+
+    @if $mobile==true {
         font-size: ($p-m / $font-size-body) + em;
     }
+
     margin-bottom: 1.25em;
     line-height: $line-height-base;
 }
 
-.jv-jobAlertContainer,
 main {
     flex: 1 0 auto;
 }
@@ -177,11 +188,12 @@ section {
 // }
 
 /*! =General */
-@if $mobile == false {
+@if $mobile==false {
     .jv-page-content {
         padding: 0; // Add fixed header height to top padding
     }
 }
+
 // End Desktop
 
 .jv-jobAlertContainer,
@@ -191,7 +203,7 @@ section {
 }
 
 .jv-page-body {
-    @if $mobile == true {
+    @if $mobile==true {
         font-size: 1em;
     }
 
@@ -215,10 +227,12 @@ section {
     max-height: 100%;
     max-width: $browser-max-width;
     margin: 0 auto;
-    @if $mobile == false {
+
+    @if $mobile==false {
         padding: 0 15px;
     }
-    @if $mobile == true {
+
+    @if $mobile==true {
         padding: 0 25px;
     }
 }

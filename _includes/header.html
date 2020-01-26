@@ -1,16 +1,26 @@
-<header class="page-header">
-
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <!-- <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
-      <nav>
-      <a href="{{ "/" | relative_url }}"><img class="logo" alt="Brett Byron" src="{{ "/assets/images/logo.svg" | relative_url }}"></a>
-      <ul class="list-inline">
-        <li><a href="{{ "/code" | relative_url }}"><i class="fa fa-code"></i>Code</a></li>
-        <li><a href="{{ "/contact" | relative_url }}"><i class="fa fa-cog"></i>Configuration</a></li>
-      </ul>
-    </nav>
+<header>
+  {%- assign default_paths = site.pages | map: "path" -%}
+  {%- assign page_paths = site.header_pages | default: default_paths -%}
+  {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+  <!-- <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
+  <div id="nav-burger">
+    <svg class="logo-animation" onclick="window.location.href=window.origin + '/animoji.html'">
+      <path id="capital" class="capital" d="M11.2,300V11.7h155.5c0,0,39,2.3,48.5,41.1c8.8,35.9-18.1,51.3-18.1,51.3" pathLength="1"></path>
+      <line class="stem" x1="47.5" y1="300" x2="47.5" y2="36" pathLength="1"></line>
+      <path class="bowl" d="M131.5,288.6c-45.1,0-84-38.9-84-83.6s38.4-83.4,84-83.4s83.2,37.7,83.2,83.5 S178.3,288.6,131.5,288.6" pathLength="1"></path>
+    </svg>
   </div>
+  <nav class="nav-vertical">
+    <div class="svg-arrows">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <polyline class="capital-arrow capital" points="11.5,0 11.5,288.4 215,288.4 131.4,204.9 " fill="none" pathLength="1"/>
+        <polyline class="lower-arrow stem" points="47.8,0 47.8,288.4 215,288.4 131.4,204.9 " fill="none" pathLength="1" />
+        <polyline class="lower-arrow bowl" points="131.4,0 131.4,288.4 215,288.4 173.2,246.6 " fill="none" pathLength="1" />
+      </svg>
+    </div>
+    <ul class="nav-items">
+      <li><a href="{{ "/code" | relative_url }}"><i class="fa fa-code"></i>Code</a></li>
+      <li><a href="{{ "/contact" | relative_url }}"><i class="fa fa-cog"></i>Configuration</a></li>
+    </ul>
+  </nav>
 </header>

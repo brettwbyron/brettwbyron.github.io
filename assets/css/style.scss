@@ -51,12 +51,6 @@ ul.examples {list-style-type:none;padding:0;
 // --- Start Scroll animation
 .scroll-data {position:fixed;top:0px;right:20px;background:#fff;width:28%;border:2px solid $color-dark-secondary;border-top:0;color:$color-dark-secondary;font-size:25px;line-height:1;z-index:999;}
 .start-data-ltr, .end-data-ltr, .start-data-rtl, .end-data-rtl {position:absolute;top:0;left:0;border-top:2px solid $color-dark-secondary;width:100px;text-align:left;}
-.logo {background-image:url('../images/logo.svg');background-repeat:no-repeat;background-position:center;background-size:contain;height:100px;width:auto;}
-.logo-animation {height:50px;position:absolute;top:0;left:0}
-.capital,.lower {fill:none;stroke-width:23;stroke-miterlimit:10;-webkit-transition:stroke-dashoffset 2s ease-in-out;transition:stroke-dashoffset 2s ease-in-out}
-.lower#stem {stroke:rgba(39,39,39,.75);stroke-dashoffset:264;stroke-dasharray:264,264;-webkit-transition:stroke-dashoffset 1s ease-in-out;transition:stroke-dashoffset 1s ease-in-out}
-.lower#bowl {stroke:rgba(243,116,79,.75);stroke-dashoffset:523.9476318359375;stroke-dasharray:523.9476318359375,523.9476318359375;-webkit-transition:stroke-dashoffset 1.5s ease-in-out;transition:stroke-dashoffset 1.5s ease-in-out}
-.capital {stroke:rgba(165,192,205,.75);stroke-dashoffset:570.0023803710938;stroke-dasharray:570.0023803710938,570.0023803710938}
 #scrollAnimationLTR, #scrollAnimationRTL {padding:0 0 50px;min-height:120vh;margin-top:100px;}
 #scrollAnimationRTL {min-height:150vh;}
 #scrollAnimationLTR, #scrollAnimationRTL h1 {margin:0 auto}
