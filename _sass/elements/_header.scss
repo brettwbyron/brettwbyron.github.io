@@ -2,20 +2,31 @@ header {
     height: 80px;
     width: 100vw;
     margin: 0;
+    border: 1px solid $color-gray;
+    z-index: $z-nav;
 
     .nav-burger {
-        height:80px;
-        width:80px;
+        height: 80px;
+        width: 80px;
         margin: 0;
         padding: 0;
 
         & svg {
             padding: 15px;
+            height: 80px;
+            width: 80px;
         }
     }
 
     nav {
-        width:80px;
-        height:100vh;
+        position: absolute;
+        top: 79px;
+        left: 0;
+        width: 80px;
+        height: 100vh;
+        border: 1px solid $color-gray;
+        border-top: 0;
+        background-color: $color-background-light;
+        z-index: $z-nav + 1;
     }
 }
