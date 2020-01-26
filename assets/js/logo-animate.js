@@ -7,7 +7,7 @@ function animateLines(elem, toggle="on", speed="1000") {
     } else if (toggle.toLowerCase() === "off") {
         elem.attr({strokeDashoffset: 1});
     }
-    console.log(elem.node.css('transition-duration'));
+    console.log($(elem.node).css('transition-duration'));
 }
 
 window.onload = function() {
