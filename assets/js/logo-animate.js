@@ -1,13 +1,13 @@
 function animateLines(elem, toggle="on", speed="1000") {
     if (speed.toLowerCase() === "slow") {
-        // elem.css('transition-duration',(elem.css('transition-duration') * 0.5));
+        // elem.node.css('transition-duration',(elem.node.css('transition-duration') * 0.5));
     }
     if (toggle.toLowerCase() === "on") {
         elem.attr({strokeDashoffset: 0});
     } else if (toggle.toLowerCase() === "off") {
         elem.attr({strokeDashoffset: 1});
     }
-    console.log(elem.node);
+    console.log(elem.node.css('transition-duration'));
 }
 
 window.onload = function() {
