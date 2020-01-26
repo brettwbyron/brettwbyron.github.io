@@ -1,4 +1,12 @@
-function animateLines(elem, toggle="on") {
+function animateLines(elem, toggle="on", speed="normal") {
+    if (speed.toLowerCase() === "slow") {
+        elem.css('transition-duration',(elem.css('transition-duration') * 0.5));
+    } else if (speed.toLowerCase() === "fast") {
+
+    } else if (speed.toLowerCase() === "normal") {
+        console.log(elem);
+        console.log(elem.css());
+    }
     if (toggle.toLowerCase() === "on") {
         elem.attr({strokeDashoffset: 0});
     } else if (toggle.toLowerCase() === "off") {
