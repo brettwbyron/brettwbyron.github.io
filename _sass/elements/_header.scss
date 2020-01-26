@@ -7,22 +7,24 @@ header {
     background-color: $color-background-light;
 
     & .nav-burger {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
 
         & svg {
             padding:10px;
         }
     }
 
-    & nav {
+    & nav.nav-vertical {
+        transition:all 0.5s ease-in-out, opacity 0.1s ease, height 0.25s ease-out;
         position: absolute;
         top: 79px;
         left: 0;
         width: 80px;
-        height: 100vh;
-        border: 1px solid $color-gray;
-        border-top: 0;
+        height: 0;
+        opacity: 0;
+        border: 0px solid $color-gray;
+        border-top: 0 !important;
         background-color: $color-background-light;
         z-index: $z-nav + 1;
     }

@@ -22,7 +22,7 @@ svg {
         fill: none;
         stroke-width: 23;
         stroke-miterlimit: 10;
-        transition: stroke-dashoffset 2s ease-out;
+        transition: stroke-dashoffset 2s ease-in-out;
     }
 
     & .stem {
@@ -30,7 +30,7 @@ svg {
         stroke: rgba($color-primary, .75);
         stroke-dashoffset: 1;
         stroke-dasharray: 1;
-        transition: stroke-dashoffset 1s ease-out;
+        transition: stroke-dashoffset 1s ease-in-out;
     }
 
     & .bowl {
@@ -38,7 +38,7 @@ svg {
         stroke: rgba($color-orange, .75);
         stroke-dashoffset: 1;
         stroke-dasharray: 1;
-        transition: stroke-dashoffset 1.5s ease-out;
+        transition: stroke-dashoffset 1.5s ease-in-out;
     }
 
     & .capital {
