@@ -21,9 +21,24 @@ $color-red-orange: #C7856D;
 $color-red: #de8e8b;
 $color-gray: #707062;
 $color-dark-gray: #191919;
+$color-gray-light: lighten($color-gray,15%);
+$color-gray-dark: darken($color-gray);
 
+$color-background: #F9F7F6;
 $color-background-light: lighten($color-highlight, 75%);
 $color-background-dark: darken($color-tertiary, 75%);
+$color-border: #f0eae7;
+$color-text: #333;
+$color-text-light: #777;
+$color-error: #cb0013;
+$color-focus: #555;
+$color-link: $color-primary;
+$color-link--hover: darken($color-primary,15%);
+$color-link--active: darken($color-primary,25%);
+
+// Selection colors
+$color-selection: $color-white;
+$color-selection-background: $color-black;
 
 // Brand
 $color-facebook: #204385;

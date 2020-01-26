@@ -42,31 +42,7 @@ $arrow-custom: $arrow-down;
 $root-url: 'brettwbyron.github.io/';
 
 // Colors
-// -----------------------------------------------------------------------------
-// $color-primary: #3d87cf;
-// $color-secondary: #14317e;
-// $color-accent: darken($color-primary,30%);
-// $color-gray: #ccc;
-// $color-gray-light: lighten($color-gray,15%);
-// $color-gray-dark: darken($color-gray); //#333;
-$color-text: #333;
-$color-text-light: #777;
-$color-error: #cb0013;
-$color-focus: #555;
-$color-link: $color-primary;
-// $color-link--hover: darken($color-primary,15%);
-// $color-link--active: darken($color-primary,25%);
-$color-background: #F9F7F6;
-
-// Section background-color
-// $color-background-light: #FCFBF9;
-// $color-background-dark: #F5F0EF;
-
-$color-border: #f0eae7;
-
-// Selection colors
-$color-selection: $color-white;
-$color-selection-background: $color-black;
+@import "color-base";
 
 // Typography
 // -----------------------------------------------------------------------------
