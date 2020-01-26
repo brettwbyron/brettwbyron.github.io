@@ -5,10 +5,10 @@ function animateLines(elem) {
 
 window.onload = function() {
     var s = Snap('svg.logo-animation');
-    var capital = s.select('#capital');
+    var capital = s.select('.capital');
     var capLen = capital.getTotalLength();
-    var stem = s.select('#stem');
-    var bowl = s.select('#bowl');
+    var stem = s.select('.stem');
+    var bowl = s.select('.bowl');
 
     this.setTimeout(() => {
         animateLines(capital);
