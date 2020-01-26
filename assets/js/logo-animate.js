@@ -5,7 +5,7 @@ function animateLines(elem, toggle="on", speed="normal") {
 
     } else if (speed.toLowerCase() === "normal") {
         console.log(elem);
-        console.log(elem.style.transitionDuration);
+        console.log(elem.style);
         // elem.attr({transitionDuration: 0});
     }
     if (toggle.toLowerCase() === "on") {

@@ -6,12 +6,17 @@ header {
     border: 1px solid $color-gray;
     background-color: $color-background-light;
 
-    & .nav-burger {
-        height: 60px;
-        width: 60px;
+    & .wrapper {
+        height: 80px;
+        width: 100%;
 
-        & svg {
-            padding:10px;
+        & .nav-burger {
+            height: 60px;
+            width: 60px;
+    
+            & svg {
+                padding:10px;
+            }
         }
     }
 
@@ -27,5 +32,18 @@ header {
         border-top: 0 !important;
         background-color: $color-background-light;
         z-index: $z-nav + 1;
+
+        & .wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+
+            & .svg-arrows {
+                position:absolute;
+                top:0;
+                left:0;
+                padding: 0 10px 10px;
+            }
+        }
     }
 }
