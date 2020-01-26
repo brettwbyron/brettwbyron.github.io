@@ -22,7 +22,7 @@ $color-red: #de8e8b;
 $color-gray: #707062;
 $color-dark-gray: #191919;
 $color-gray-light: lighten($color-gray,15%);
-$color-gray-dark: darken($color-gray);
+$color-gray-dark: darken($color-gray,15%);
 
 $color-background: #F9F7F6;
 $color-background-light: lighten($color-highlight, 75%);
