@@ -22,28 +22,22 @@ svg {
         fill: none;
         stroke-width: 23;
         stroke-miterlimit: 10;
-        transition: stroke-dashoffset 2s ease-in-out;
+        stroke-dashoffset: 1;
+        stroke-dasharray: 1;
     }
 
     & .stem {
-        fill: none;
         stroke: rgba($color-primary, .75);
-        stroke-dashoffset: 0.77;
-        stroke-dasharray: 1;
         transition: stroke-dashoffset 1s ease-in-out;
     }
 
     & .bowl {
-        fill: none;
         stroke: rgba($color-orange, .75);
-        stroke-dashoffset: 0.77;
-        stroke-dasharray: 1;
         transition: stroke-dashoffset 1.5s ease-in-out;
     }
 
     & .capital {
         stroke: rgba($color-secondary, .75);
-        stroke-dashoffset: 0.77;
-        stroke-dasharray: 1;
+        transition: stroke-dashoffset 2s ease-in-out;
     }
 }
