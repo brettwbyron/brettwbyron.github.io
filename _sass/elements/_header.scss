@@ -8,17 +8,17 @@ header {
 
     & .nav-burger {
         margin: 0;
-        padding: 10px;
+        height: 80px;
+        width: 80px;
 
         & svg {
-            height: 60px;
-            width: 60px;
+            padding:10px;
         }
     }
 
     & nav {
         position: absolute;
-        top: 80px;
+        top: 79px;
         left: 0;
         width: 80px;
         height: 100vh;
