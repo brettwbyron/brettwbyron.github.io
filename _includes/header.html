@@ -3,7 +3,7 @@
   {%- assign page_paths = site.header_pages | default: default_paths -%}
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
   <!-- <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
-  <div id="nav-burger">
+  <div class="nav-burger">
     <svg class="logo-animation">
       <path id="capital" class="capital" d="M11.2,300V11.7h155.5c0,0,39,2.3,48.5,41.1c8.8,35.9-18.1,51.3-18.1,51.3" pathLength="1"></path>
       <line class="stem" x1="47.5" y1="300" x2="47.5" y2="36" pathLength="1"></line>
