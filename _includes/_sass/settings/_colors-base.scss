@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// =Base Colors
+// -----------------------------------------------------------------------------
+
+$color-white: #fff;
+$color-black: #000; // $color-section-gray: #f1f1f1; // Gray background
+
+// Personal Brand
+$color-primary: #8A787A; //#D1BB73; //#D29A74;
+$color-secondary: #87B3C9; //#A3BECC; //#a5c0cd;
+$color-dark-secondary: #60737D; //darken($color-secondary, 40%);
+$color-tertiary: #4A4932; //#706D1A; //#fff200;
+$color-highlight: #C9C891;
+
+$color-green: #9E9B47;
+$color-blue: #A3B3CC; //#9db6d8;
+$color-dark-blue: #333B6B;
+$color-steel-blue: #60737D;
+$color-orange: #C7926D;
+$color-red-orange: #C7856D;
+$color-red: #de8e8b;
+$color-gray: #707062;
+$color-dark-gray: #191919;
+
+$color-background-light: lighten($color-highlight, 75%);
+$color-background-dark: darken($color-tertiary, 75%);
+
+// Brand
+$color-facebook: #204385;
+$color-twitter: #2AA9E0;
+$color-youtube: #EB2429;
+$color-instagram: #44749C;
+$color-linkedin: #0077b5;
+$color-glassdoor: #0CAA41;
+$color-outline-focus: #3b99fc;

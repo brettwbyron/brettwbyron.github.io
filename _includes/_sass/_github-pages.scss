@@ -1,0 +1,105 @@
+// --------------------------------------------------------------------------
+/*! =GitHub Pages Overwrite */
+// --------------------------------------------------------------------------
+::selection,
+::-moz-selection {
+    background: $color-dark-secondary;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $gilroy;
+    color: $color-dark-secondary
+}
+
+html,
+body {
+    font-family: $jura;
+    font-weight: 400;
+}
+
+pre {
+    padding: 5px 10px;
+    margin: 0;
+    background-color: $color-background-light;
+    border: 1px solid $color-background-dark;
+    border-radius: 4px;
+}
+
+:not(pre)>code {
+    padding: 5px 10px;
+    margin: 0;
+    background-color: $color-background-light;
+    border: 1px solid $color-background-dark;
+    border-radius: 4px;
+}
+
+code {
+    font-family: $mono !important;
+    font-size: 13px;
+    line-height: 2;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: $color-text;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li a,
+nav ul li a:visited {
+    font-family: $gilroy-light;
+    color: $color-white;
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: $color-dark-secondary
+}
+
+nav ul li a i {
+    padding-right: 5px;
+}
+
+ol li {
+    margin-bottom: 5px
+}
+
+section.main-content {
+    max-width: 1120px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h1.project-name {
+    color: $color-white;
+}
+
+a.site-title {
+    color: $color-white;
+    font-size: 1.5em;
+    font-family: $gilroy;
+}

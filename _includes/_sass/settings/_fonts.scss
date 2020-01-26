@@ -1,0 +1,11 @@
+/*! =Webfonts */
+// @import url("https://use.typekit.net/jtz3kmp.css");
+@import url({{ "/resources/fonts/Gilroy/Gilroy-Light.otf" | relative_url }});
+@import url({{ "/resources/fonts/Gilroy/Gilroy-SemiBold.otf" | relative_url }});
+@import url({{ "/resources/fonts/InputMono/InputMono-Regular.ttf" | relative_url }});
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700&display=swap');
+
+$gilroy: 'Gilroy-SemiBold';
+$gilroy-light: 'Gilroy-Light';
+$jura: 'Jura';
+$input-mono: 'InputMono-Regular';

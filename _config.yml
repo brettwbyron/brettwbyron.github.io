@@ -1,15 +1,14 @@
 ---
 theme: jekyll-theme-cayman
-title: Jobvite CWS Brand
+title: Brett W. Byron
 defaults:
-    scope:
-      path: ""
-      type: ""
-    values:
-      author: Brett Byron
-      category: Jobvite CWS Brand
-webrick:
-  headers:
-    main-header: MAIN_HEADER
-    other-header: OTHER_HEADER
+  scope:
+    path: ""
+    type: ""
+  values:
+    author: Brett Byron
+    category: Brett W. Byron
+sass:
+  style: compressed
+  sass_dir: _sass
 ---
