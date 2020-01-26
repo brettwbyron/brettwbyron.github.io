@@ -5,7 +5,7 @@ header {
     border: 1px solid $color-gray;
     z-index: $z-nav;
 
-    .nav-burger {
+    & .nav-burger {
         height: 80px;
         width: 80px;
         margin: 0;
@@ -18,7 +18,7 @@ header {
         }
     }
 
-    nav {
+    & nav {
         position: absolute;
         top: 79px;
         left: 0;
