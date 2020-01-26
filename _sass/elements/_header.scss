@@ -1,13 +1,12 @@
 header {
+    z-index: $z-nav;
     height: 80px;
     width: 100vw;
     margin: 0;
     border: 1px solid $color-gray;
     background-color: $color-background-light;
-    z-index: $z-nav;
 
     & .nav-burger {
-        margin: 0;
         height: 80px;
         width: 80px;
 
