@@ -1,13 +1,10 @@
-function animateLines(elem, toggle="on", speed="1000") {
-    if (speed.toLowerCase() === "slow") {
-        // elem.node.css('transition-duration',(elem.node.css('transition-duration') * 0.5));
-    }
+function animateLines(elem, toggle="on") {
     if (toggle.toLowerCase() === "on") {
-        $( elem.node.tagName + '.' + elem.node.className.baseVal ).css('stroke-dashoffset',0);
-        // elem.attr({strokeDashoffset: 0});
+        // $( elem.node.tagName + '.' + elem.node.className.baseVal ).css('stroke-dashoffset',0);
+        elem.attr({strokeDashoffset: 0});
     } else if (toggle.toLowerCase() === "off") {
-        $( elem.node.tagName + '.' + elem.node.className.baseVal ).css('stroke-dashoffset',1);
-        // elem.attr({strokeDashoffset: 1});
+        // $( elem.node.tagName + '.' + elem.node.className.baseVal ).css('stroke-dashoffset',1);
+        elem.attr({strokeDashoffset: 1});
     }
     // console.log($(elem.node).css('transition-duration'));
 }
